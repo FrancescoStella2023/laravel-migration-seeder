@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends("layouts.master")
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section("pageTitle", "Treni")
 
-<body>
-    <div class="container">
-        <p>Testo</p>
-    </div>
-</body>
+@section("title", "Lista treni")
 
-</html>
+@section("Content")
+
+    <ul>
+        @foreach ($trains as $train)
+            <li>{{ $train["company"] }}</li>
+        @endforeach
+    </ul>
+
+@endsection
